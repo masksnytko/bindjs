@@ -41,5 +41,7 @@ let vueUser = new Bind(user,
     <input class=class_input value=input>
 </div>`);
 
+//или
+let vueUser = new Bind(user, document.getElementById('<ид>'));
 document.body.appendChild(vueUser.el);
 ```
