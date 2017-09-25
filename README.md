@@ -7,14 +7,11 @@ class User {
     constructor(data) {
         Object.assign(this, data);
     }
-    logbalance() {
+    logBalance() {
         console.log(this.balance1);
     }
-    mousemove(v) {
+    mouseMove(v) {
         console.log(v);
-    }
-    onchangeName(name) {
-        this.name = name.target.value;
     }
 }
 ```
@@ -35,12 +32,12 @@ let user = new User({
 Биндим его с вью, все его свойста и методы привяжутся к элементам дома
 ```js
 let vueUser = new Bind(user,
-`<div onclick=logbalance>
+`<div onclick=logBalance>
     <a balance0></a>
     <a href=photo balance1></a>
     <div name></div>
     <div items></div>
-    <div onmousemove=mousemove role></div>
+    <div onmousemove=mouseMove role></div>
     <input class=class_input value=input>
 </div>`);
 
