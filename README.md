@@ -42,6 +42,7 @@ let vueUser = new Bind(user,
 </div>`);
 
 //или
-let vueUser = new Bind(user, document.getElementById('<ид>'));
+//let vueUser = new Bind(user, document.getElementById('<ид>'));
+
 document.body.appendChild(vueUser.el);
 ```
