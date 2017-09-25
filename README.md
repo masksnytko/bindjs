@@ -24,7 +24,7 @@ let user = new User({
     name: 'Jktu',
     role: 'admin',
     class_input: 'any',
-    input: 'input',
+    input: 'текущее значение в поле ввода',
     photo: 'https://pp.userapi.com/c639821/v639821682/364a2/ZEM3JN4e9M0.jpg'
 });
 ```
