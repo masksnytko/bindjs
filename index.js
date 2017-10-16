@@ -61,7 +61,7 @@ class Bind {
                         });
                     }
                 }
-				bind(node, data, _data);
+		        bind(node, data, _data);
             }
         };
 
