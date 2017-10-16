@@ -60,11 +60,8 @@ class Bind {
                             }
                         });
                     }
-    
-                    if (el.children.length) {
-                        bind(node, data, _data);
-                    }
                 }
+				bind(node, data, _data);
             }
         };
 
