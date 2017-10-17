@@ -5,17 +5,15 @@ class Bind {
             throw new Error('data param not support');
         }
 
-        let el = document.createElement('div');
-
         if (typeof template === 'string') {
-            el.innerHTML = template;    
+            let el = document.createElement('div');
+            el.innerHTML = template;
+            this.el = el.children[0];
         } else if (template instanceof Element) {
-            el.appendChild(template);
+            this.el = template;
         } else {
             throw new Error('template param not support');
         }
-
-        this.el = el.children[0];
 
         let bind = (el, data, _data) => {
             for (var i = 0, j; i < el.children.length; i++) {
@@ -43,20 +41,17 @@ class Bind {
                                 }
                             });
                         }
-                    } else {
-
-                        if (data[name] !== undefined) {
-                            _data[name] = data[name];
-                            node.innerHTML = data[name];    
-                        }
-
+                    } else if (data[name] !== undefined) {
+                        _data[name] = data[name];
+                        node.textContent = data[name];
+                        
                         this[name] = node;
-
+                        
                         Object.defineProperty(data, name, {
                             get: () => _data[name],
                             set: v => {
                                 _data[name] = v
-                                node.innerHTML = v;
+                                node.textContent = v;
                             }
                         });
                     }
@@ -65,6 +60,8 @@ class Bind {
             }
         };
 
-        bind(el, data, new Object);
+        bind(this.el, data, new Object);
     }
 }
+
+module.exports = Bind;
