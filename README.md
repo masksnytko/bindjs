@@ -54,3 +54,4 @@ document.body.appendChild(bind.el);
 user.balance = 100;
 user.name = 'Петя';
 ```
+при событии onmousemove на div сработает mouseMove
