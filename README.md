@@ -1,8 +1,10 @@
 # Пример простого биндинга объекта с шаблоном дом
 
 Какая-то реализация класса
-const bind = require('bind');
+
 ```js
+const bind = require('bind');
+
 class User {
     constructor(data) {
         Object.assign(this, data);
